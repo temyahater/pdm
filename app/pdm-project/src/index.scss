@@ -1,0 +1,496 @@
+$account-blue: #1e3d59; 
+$account-gray: #f5f0e1;
+$account-orange: #ff6e40;
+$account-yellow: #ffc13b;
+$account-red: #d72631;
+$account-lightblue: #a2d5c6;
+$account-midlleblue: #077b8a;
+$account-purple: #5c3c92;
+
+body{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+code{
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App{
+    display: flex;
+    margin-top: 7%;
+    height: 500px;
+}
+
+.enterForm{
+    width: 35%;
+    height: 100%;
+    margin-left: 5%;
+}
+
+.enterPeoples{
+    width: 55%;
+    height: 100%;
+    margin-left: 3%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .enterPeoplesImage{
+        width: 40%;
+        height: 40%;
+
+        img{
+            width: 100%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            transition: all 1s ease-out;
+
+            &:hover{
+                width: 110%;
+            }
+        }
+    }
+
+    div:nth-child(2){
+        margin-left: -2%;
+        z-index: 1;
+    }
+
+    div:nth-child(3){
+        margin: 1% 0 0 22%;
+        z-index: 1;
+    }
+
+    div:nth-child(4){
+        margin: -5% 0 0 28%;
+        z-index: 1;
+    }
+
+    div:nth-child(5){
+        margin: -5% 0 0 1%;
+        z-index: 1;
+    }
+
+    div:nth-child(6){
+        margin-left: 18%;
+        z-index: 1;
+    }
+
+    div:nth-child(7){
+        margin: -65% 0 0 32%;
+    }
+
+    div:nth-child(8){
+        margin: -45% 0 0 57%;
+    }
+
+    div:nth-child(9){
+        margin: -25% 0 0 40%;
+    }
+
+    div:nth-child(10){
+        margin-top: -45%;
+    }
+}
+
+.enterCompany{
+    font-size: 65px;
+    font-family: 'Londrina Solid', cursive;
+    font-weight: 900;
+    margin: -14% 0 0 13%;
+    display: flex;
+
+    span{
+        margin-left: 1%;
+    }
+
+    img{
+        width: 16%;
+        height: 5%;
+    }
+}
+
+.enterHeading{
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Londrina Solid', cursive;
+    margin: -5% 0 0 3%;
+}
+
+.enterFormData{
+    width: 80%;
+    height: 40%;
+    margin: 10% 0 0 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    
+    .enterRegister{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        span{
+            color: rgb(231, 231, 231);
+            font-size: 19px;
+            font-family: 'Londrina Solid', cursive;
+            background: none;
+            border: none;
+
+            &:hover{
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+    button{
+        font-size: 25px;
+        background:rgba(238, 18, 18, 0.8);
+        color: rgb(231, 231, 231);
+        border: none;
+        outline: none;
+        transition: all 0.3s ease-out;
+        width: 30%;
+        height: 20%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+        &:hover{
+            width: 35%;
+            height: 25%;
+            box-shadow: 0 0 10px rgba(214, 25, 25, 0.5);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+    }
+}
+
+
+.enterFormInput{
+    display: flex;
+    font-size: 29px;
+    font-family: 'Londrina Solid', cursive;
+    background-color:rgba(255, 255, 255, 0.5);
+    border-radius: 3%;
+    padding: 1%;
+    border: 1px double black;
+    width: 80%;
+    transition: all 0.2s ease-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    input{
+        border: none;
+        height: 100%;
+        width: 100%;
+        margin-left: 5%;
+        background: none;
+        outline: none;
+        font-size: 19px;
+    }
+}
+
+.registerFormModal{
+    font-size: 29px;
+    font-family: 'Londrina Solid', cursive;
+    width: 150%;
+    margin-left: -25%;
+
+    .registerData{
+        display: flex;
+        justify-content: space-between;
+
+        input{
+            border: none;
+            margin-left: 5%;
+            width: 80%;
+            transition: all 0.5s ease-out;
+
+            &:hover{
+                background: rgba(201, 201, 201, 0.5);
+            }
+        }
+    }
+
+    .emptyRegisterData{
+        border: 1px solid red !important;
+    }
+}
+
+.prettyButtonOrange{
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-out;
+    width: 15%;
+    background: rgba(255, 196, 86, 0.7);
+
+    &:hover{
+        width: 18%;
+        background: rgba(255, 196, 86, 0.9);
+        opacity: 0.9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.prettyButtonGray{
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-out;
+    width: 15%;
+    background: rgba(153, 153, 153, 0.7);
+
+    &:hover{
+        width: 18%;
+        background: rgba(172, 172, 172, 0.9);
+        opacity: 0.9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
+
+.account{
+    width: 100%;
+    height: 1000px;
+    background: $account-gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .navbar{
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        height: 7%;
+        background: $account-blue;
+        color: $account-orange;
+
+        a{
+            color: $account-gray;
+        }
+
+        #account-exit{
+            background: none;
+            border: none;
+            outline: none;
+            color: $account-red;
+        }
+    }
+
+    .account-main{
+        width: 65%;
+        height: 100%;
+
+        .account-main-header{
+            width: 100%;
+            height: 50%;
+            margin-top: 5%;
+            display: flex;
+
+            .account-main-header-photos{
+                width: 35%;
+                height: 100%;
+
+                .account-main-header-photos-mainPhoto{
+                    width: 100%;
+                    height: 80%;
+                    background: $account-lightblue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    :hover{
+                        width: 95%;
+                        height: 100%;
+                    }
+
+                    img{
+                        width: 90%;
+                        height: 95%;
+                        border-radius: 3px;
+                        transition: all 1s ease-out;
+                    }
+                }
+
+                .account-main-header-photos-otherPhotos{
+                    width: 100%;
+                    height: 20%;
+                    background: $account-lightblue;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    :nth-child(1){
+                        z-index: 4;
+                    }
+
+                    :nth-child(2){
+                        z-index: 3;
+                    }
+
+                    :nth-child(3){
+                        z-index: 2;
+                    }
+
+                    :nth-child(4){
+                        z-index: 1;
+                    }
+
+                    .account-main-header-photos-addPhoto{
+                        width: 23%;
+                        height: 85%;
+                        border-radius: 10%;
+
+                        :hover{
+                            width: 300%;
+                            height: 300%;
+                            transition: all 1s ease-out;
+                        }
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
+            .account-main-header-info{
+                width: 65%;
+                height: 100%;
+                background: $account-lightblue;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding-left: 3%;
+                color: $account-gray;
+
+                div{
+                    background: $account-midlleblue;
+                    width: 90%;
+                    height: max-content;
+                    font-size: 22px;
+                    display: flex;
+                    align-items: center;
+                    font-family: 'Work Sans', sans-serif;
+                    border-radius: 5px;
+                    padding-left: 1%;
+                }
+            }
+        }
+        
+        .account-main-footer{
+            background: $account-blue;
+            width: 100%;
+            height: 45%;
+            display: flex;
+            flex-direction: column;
+
+            .account-main-description{
+                height: 35%;
+                width: 100%;
+                background: $account-red;
+                color: $account-gray;
+                font-family: 'Work Sans', sans-serif;
+                font-size: 22px;
+                padding: 1%;
+
+                &:hover{
+                    text-shadow: 0 0 10px rgb(255, 255, 255);
+                }
+            }
+
+            .account-main-feedbacks{
+                height: 55%;
+                width: 100%;
+                background: $account-orange;
+                color: $account-gray;
+                font-family: 'Work Sans', sans-serif;
+                font-size: 22px;
+                padding: 1%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .account-main-feedback{
+                    width: max-content;
+                    max-width: 90%;
+                    height: max-content;
+                    background: $account-red;
+                    padding: 0.3%;
+                    border-radius: 5px;
+                    margin-right: 1%;
+
+                    &:hover{
+                        box-shadow: 0 0 10px $account-red;
+                    }
+                }
+            }
+        }
+    }
+
+    #AccountInfoModal{
+        .accountInfoModal{
+            background: $account-lightblue;
+            display: flex;
+            font-family: 'Work Sans', sans-serif;
+
+            textarea{
+                background: $account-gray;
+                width: 100%;
+                height: max-content;
+                min-height: 100px;
+                font-size: 25px;
+            }
+
+            .accountInfoModalButtons{
+                width: 40%;
+                align-self: flex-end;
+                display: flex;
+                justify-content: space-around;
+                margin-right: 2.5%;
+                margin-bottom: 2.5%;
+
+                :nth-child(1){
+                    width: 45%;
+                    border: none;
+                    outline: none;
+                    transition: all 0.3s ease-out;
+                    background: $account-red;
+                    color: $account-gray;
+                    border-radius: 5px;
+
+                    &:hover{
+                        width: 55%;
+                        background: #eb1a28;
+                    }
+                }
+
+                :nth-child(2){
+                    width: 35%;
+                    border: none;
+                    outline: none;
+                    transition: all 0.3s ease-out;
+                    background: $account-midlleblue;
+                    color: $account-gray;
+                    border-radius: 5px;
+
+                    &:hover{
+                        width: 45%;
+                        background: #069eb3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');

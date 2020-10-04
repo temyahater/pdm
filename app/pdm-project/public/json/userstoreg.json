@@ -1,0 +1,44 @@
+[
+    {
+        "_id": 4,
+        "email": "some email",
+        "name": "Vlad",
+        "surname": "Iiiikaaaan ",
+        "old": "20",
+        "password": "9",
+        "status": "Add status",
+        "familyStatus": "Add family status",
+        "interests": ["Add interests"],
+        "purpose": "Add purpose",
+        "links": ["Add links"],
+        "rating": 0
+    },
+    {  
+        "_id": 5,
+        "email": "some email",
+        "name": "Andrey",
+        "surname": "Yakimovich ",
+        "old": "20",
+        "password": "10",
+        "status": "Add status",
+        "familyStatus": "Add family status",
+        "interests": ["Add interests"],
+        "purpose": "Add purpose",
+        "links": ["Add links"],
+        "rating": 0
+    },
+    {
+        "_id": 6,
+        "email": "some email",
+        "name": "Evgeny",
+        "surname": "Shokel ",
+        "old": "20",
+        "password": "11",
+        "status": "Add status",
+        "familyStatus": "Add family status",
+        "interests": ["Add interests"],
+        "purpose": "Add purpose",
+        "links": ["Add links"],
+        "rating": 0
+    }
+]

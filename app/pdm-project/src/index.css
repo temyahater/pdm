@@ -1,0 +1,571 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 7%;
+  height: 500px;
+}
+
+.enterForm {
+  width: 35%;
+  height: 100%;
+  margin-left: 5%;
+}
+
+.enterPeoples {
+  width: 55%;
+  height: 100%;
+  margin-left: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.enterPeoples .enterPeoplesImage {
+  width: 40%;
+  height: 40%;
+}
+
+.enterPeoples .enterPeoplesImage img {
+  width: 100%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.enterPeoples .enterPeoplesImage img:hover {
+  width: 110%;
+}
+
+.enterPeoples div:nth-child(2) {
+  margin-left: -2%;
+  z-index: 1;
+}
+
+.enterPeoples div:nth-child(3) {
+  margin: 1% 0 0 22%;
+  z-index: 1;
+}
+
+.enterPeoples div:nth-child(4) {
+  margin: -5% 0 0 28%;
+  z-index: 1;
+}
+
+.enterPeoples div:nth-child(5) {
+  margin: -5% 0 0 1%;
+  z-index: 1;
+}
+
+.enterPeoples div:nth-child(6) {
+  margin-left: 18%;
+  z-index: 1;
+}
+
+.enterPeoples div:nth-child(7) {
+  margin: -65% 0 0 32%;
+}
+
+.enterPeoples div:nth-child(8) {
+  margin: -45% 0 0 57%;
+}
+
+.enterPeoples div:nth-child(9) {
+  margin: -25% 0 0 40%;
+}
+
+.enterPeoples div:nth-child(10) {
+  margin-top: -45%;
+}
+
+.enterCompany {
+  font-size: 65px;
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 900;
+  margin: -14% 0 0 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.enterCompany span {
+  margin-left: 1%;
+}
+
+.enterCompany img {
+  width: 16%;
+  height: 5%;
+}
+
+.enterHeading {
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Londrina Solid', cursive;
+  margin: -5% 0 0 3%;
+}
+
+.enterFormData {
+  width: 80%;
+  height: 40%;
+  margin: 10% 0 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.enterFormData .enterRegister {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.enterFormData .enterRegister span {
+  color: #e7e7e7;
+  font-size: 19px;
+  font-family: 'Londrina Solid', cursive;
+  background: none;
+  border: none;
+}
+
+.enterFormData .enterRegister span:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.enterFormData button {
+  font-size: 25px;
+  background: rgba(238, 18, 18, 0.8);
+  color: #e7e7e7;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  width: 30%;
+  height: 20%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.enterFormData button:hover {
+  width: 35%;
+  height: 25%;
+  -webkit-box-shadow: 0 0 10px rgba(214, 25, 25, 0.5);
+          box-shadow: 0 0 10px rgba(214, 25, 25, 0.5);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.enterFormInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 29px;
+  font-family: 'Londrina Solid', cursive;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3%;
+  padding: 1%;
+  border: 1px double black;
+  width: 80%;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.enterFormInput input {
+  border: none;
+  height: 100%;
+  width: 100%;
+  margin-left: 5%;
+  background: none;
+  outline: none;
+  font-size: 19px;
+}
+
+.registerFormModal {
+  font-size: 29px;
+  font-family: 'Londrina Solid', cursive;
+  width: 150%;
+  margin-left: -25%;
+}
+
+.registerFormModal .registerData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.registerFormModal .registerData input {
+  border: none;
+  margin-left: 5%;
+  width: 80%;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.registerFormModal .registerData input:hover {
+  background: rgba(201, 201, 201, 0.5);
+}
+
+.registerFormModal .emptyRegisterData {
+  border: 1px solid red !important;
+}
+
+.prettyButtonOrange {
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  width: 15%;
+  background: rgba(255, 196, 86, 0.7);
+}
+
+.prettyButtonOrange:hover {
+  width: 18%;
+  background: rgba(255, 196, 86, 0.9);
+  opacity: 0.9;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.prettyButtonGray {
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  width: 15%;
+  background: rgba(153, 153, 153, 0.7);
+}
+
+.prettyButtonGray:hover {
+  width: 18%;
+  background: rgba(172, 172, 172, 0.9);
+  opacity: 0.9;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.account {
+  width: 100%;
+  height: 1000px;
+  background: #f5f0e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.account .navbar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 7%;
+  background: #1e3d59;
+  color: #ff6e40;
+}
+
+.account .navbar a {
+  color: #f5f0e1;
+}
+
+.account .navbar #account-exit {
+  background: none;
+  border: none;
+  outline: none;
+  color: #d72631;
+}
+
+.account .account-main {
+  width: 65%;
+  height: 100%;
+}
+
+.account .account-main .account-main-header {
+  width: 100%;
+  height: 50%;
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.account .account-main .account-main-header .account-main-header-photos {
+  width: 35%;
+  height: 100%;
+}
+
+.account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-mainPhoto {
+  width: 100%;
+  height: 80%;
+  background: #a2d5c6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-mainPhoto :hover {
+  width: 95%;
+  height: 100%;
+}
+
+.account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-mainPhoto img {
+  width: 90%;
+  height: 95%;
+  border-radius: 3px;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-otherPhotos {
+  width: 100%;
+  height: 20%;
+  background: #a2d5c6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-otherPhotos :nth-child(1) {
+  z-index: 4;
+}
+
+.account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-otherPhotos :nth-child(2) {
+  z-index: 3;
+}
+
+.account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-otherPhotos :nth-child(3) {
+  z-index: 2;
+}
+
+.account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-otherPhotos :nth-child(4) {
+  z-index: 1;
+}
+
+.account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-otherPhotos .account-main-header-photos-addPhoto {
+  width: 23%;
+  height: 85%;
+  border-radius: 10%;
+}
+
+.account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-otherPhotos .account-main-header-photos-addPhoto :hover {
+  width: 300%;
+  height: 300%;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-otherPhotos .account-main-header-photos-addPhoto img {
+  width: 100%;
+  height: 100%;
+}
+
+.account .account-main .account-main-header .account-main-header-info {
+  width: 65%;
+  height: 100%;
+  background: #a2d5c6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-left: 3%;
+  color: #f5f0e1;
+}
+
+.account .account-main .account-main-header .account-main-header-info div {
+  background: #077b8a;
+  width: 90%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Work Sans', sans-serif;
+  border-radius: 5px;
+  padding-left: 1%;
+}
+
+.account .account-main .account-main-footer {
+  background: #1e3d59;
+  width: 100%;
+  height: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.account .account-main .account-main-footer .account-main-description {
+  height: 35%;
+  width: 100%;
+  background: #d72631;
+  color: #f5f0e1;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 22px;
+  padding: 1%;
+}
+
+.account .account-main .account-main-footer .account-main-description:hover {
+  text-shadow: 0 0 10px white;
+}
+
+.account .account-main .account-main-footer .account-main-feedbacks {
+  height: 55%;
+  width: 100%;
+  background: #ff6e40;
+  color: #f5f0e1;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 22px;
+  padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.account .account-main .account-main-footer .account-main-feedbacks .account-main-feedback {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 90%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background: #d72631;
+  padding: 0.3%;
+  border-radius: 5px;
+  margin-right: 1%;
+}
+
+.account .account-main .account-main-footer .account-main-feedbacks .account-main-feedback:hover {
+  -webkit-box-shadow: 0 0 10px #d72631;
+          box-shadow: 0 0 10px #d72631;
+}
+
+.account #AccountInfoModal .accountInfoModal {
+  background: #a2d5c6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.account #AccountInfoModal .accountInfoModal textarea {
+  background: #f5f0e1;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-height: 100px;
+  font-size: 25px;
+}
+
+.account #AccountInfoModal .accountInfoModal .accountInfoModalButtons {
+  width: 40%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-right: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.account #AccountInfoModal .accountInfoModal .accountInfoModalButtons :nth-child(1) {
+  width: 45%;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #d72631;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.account #AccountInfoModal .accountInfoModal .accountInfoModalButtons :nth-child(1):hover {
+  width: 55%;
+  background: #eb1a28;
+}
+
+.account #AccountInfoModal .accountInfoModal .accountInfoModalButtons :nth-child(2) {
+  width: 35%;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #077b8a;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.account #AccountInfoModal .accountInfoModal .accountInfoModalButtons :nth-child(2):hover {
+  width: 45%;
+  background: #069eb3;
+}
+/*# sourceMappingURL=index.css.map */
