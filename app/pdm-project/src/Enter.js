@@ -21,8 +21,8 @@ async function postUsersToReg(user){
     const response = await fetch('http://localhost:5000/userstoreg', {
       method: 'POST', 
       body: JSON.stringify({id:user.id,email:user.email,name:user.name,surname:user.surname,old:user.old,password:user.password,
-        status:user.status,familyStatus:user.familyStatus,interests:user.interests,purpose:user.purpose,
-        links:user.links,rating:user.rating}), 
+        status:user.status,familyStatus:user.familyStatus,interests:user.interests,purpose:user.purpose,links:user.links,
+        aboutSelf:user.aboutSelf,feedbacks:user.feedbacks,rating:user.rating}), 
       headers: {'Content-Type': 'application/json'}
     });
     const json = await response.json();
@@ -47,7 +47,8 @@ class Enter extends Component{
           :postUsersToReg({id:(new Date()).getTime(),email:document.getElementById('registerEmail').value,
           name:document.getElementById('registerName').value,surname:document.getElementById('registerSurname').value,
           old:document.getElementById('registerOld').value,password:document.getElementById('registerPassword').value,
-          status:'Add status',familyStatus:'Add family status',interests:['Add interests'],purpose:'Add purpose',links:['Add links'],rating:0})
+          status:'Add status',familyStatus:'Add family status',interests:['Add interests'],purpose:'Add purpose',links:['Add links'],
+          aboutSelf:'About self',feedbacks:['Feedback'],rating:0})
           :document.getElementById('registerOld').classList.add('emptyRegisterData')
           :document.getElementById('registerPasswordRepeat').classList.add('emptyRegisterData')
           :[].map.call(document.getElementsByClassName('registerInputs'),(e)=>e.value!==''?e:e.classList.add('emptyRegisterData')))}

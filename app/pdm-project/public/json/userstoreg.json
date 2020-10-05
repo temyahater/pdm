@@ -11,6 +11,8 @@
         "interests": ["Add interests"],
         "purpose": "Add purpose",
         "links": ["Add links"],
+        "aboutSelf": "About self",
+        "feedbacks": ["Feedback"],
         "rating": 0
     },
     {  
@@ -25,6 +27,8 @@
         "interests": ["Add interests"],
         "purpose": "Add purpose",
         "links": ["Add links"],
+        "aboutSelf": "About self",
+        "feedbacks": ["Feedback"],
         "rating": 0
     },
     {
@@ -39,6 +43,8 @@
         "interests": ["Add interests"],
         "purpose": "Add purpose",
         "links": ["Add links"],
+        "aboutSelf": "About self",
+        "feedbacks": ["Feedback"],
         "rating": 0
     }
 ]

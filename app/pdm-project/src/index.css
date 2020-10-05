@@ -401,13 +401,13 @@ code {
 .account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-otherPhotos .account-main-header-photos-addPhoto :hover {
   width: 300%;
   height: 300%;
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
 }
 
 .account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-otherPhotos .account-main-header-photos-addPhoto img {
   width: 100%;
   height: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .account .account-main .account-main-header .account-main-header-info {
@@ -443,6 +443,15 @@ code {
   font-family: 'Work Sans', sans-serif;
   border-radius: 5px;
   padding-left: 1%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.account .account-main .account-main-header .account-main-header-info div:hover {
+  width: 92%;
+  margin-left: -5px;
+  -webkit-box-shadow: 5px 10px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .account .account-main .account-main-footer {

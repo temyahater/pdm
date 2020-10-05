@@ -17,12 +17,16 @@ class Account extends Component{
     this.setState({addInfo:e});
   }
 
+  updateAccountInfo=e=>{
+    this.setState({account:e});
+  }
+
   render(){
     return ( 
       <div className="account">
         <Nav />
         <AccountInfo updateAddInfo={this.updateAddInfo} accountInfo={this.state.account} />
-        <AddAccountInfo addInfo={this.state.addInfo} accountInfo={this.state.account} />
+        <AddAccountInfo updateAccountInfo={this.updateAccountInfo} addInfo={this.state.addInfo} accountInfo={this.state.account} />
       </div>
     );
   }

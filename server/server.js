@@ -35,7 +35,7 @@ app.post('/users',(req,res)=>{
     db.collection('users').insertOne({_id:req.body.id,email:req.body.email,name:req.body.name,
         surname:req.body.surname,old:req.body.old,password:req.body.password,status:req.body.status,
         familyStatus:req.body.familyStatus,interests:req.body.interests,purpose:req.body.purpose,
-        links:req.body.links,rating:req.body.rating},(err,result)=>{
+        links:req.body.links,aboutSelf:req.body.aboutSelf,feedbacks:req.body.feedbacks,rating:req.body.rating},(err,result)=>{
         if(err){
             console.log(err);
             return res.sendStatus(500);
@@ -89,7 +89,7 @@ app.post('/userstoreg',(req,res)=>{
     db.collection('userstoreg').insertOne({_id:req.body.id,email:req.body.email,name:req.body.name,
         surname:req.body.surname,old:req.body.old,password:req.body.password,status:req.body.status,
         familyStatus:req.body.familyStatus,interests:req.body.interests,purpose:req.body.purpose,
-        links:req.body.links,rating:req.body.rating},(err,result)=>{
+        links:req.body.links,aboutSelf:req.body.aboutSelf,feedbacks:req.body.feedbacks,rating:req.body.rating},(err,result)=>{
         if(err){
             console.log(err);
             return res.sendStatus(500);
