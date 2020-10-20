@@ -24,7 +24,7 @@ class Account extends Component{
   render(){
     return ( 
       <div className="account">
-        <Nav />
+        <Nav account={this.state.account} />
         <AccountInfo updateAddInfo={this.updateAddInfo} accountInfo={this.state.account} />
         <AddAccountInfo updateAccountInfo={this.updateAccountInfo} addInfo={this.state.addInfo} accountInfo={this.state.account} />
       </div>

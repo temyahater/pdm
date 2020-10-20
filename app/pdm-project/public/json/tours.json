@@ -1,0 +1,26 @@
+[
+    {
+        "_id": 1,
+        "name": "tour 1",
+        "link": "link",
+        "tourInfo": "tourInfo",
+        "price":"700",
+        "photo":"photo"
+    },
+    {
+        "_id": 2,
+        "name": "tour 2",
+        "link": "link",
+        "tourInfo": "tourInfo",
+        "price":"800",
+        "photo":"photo"
+    },
+    {
+        "_id": 3,
+        "name": "tour 3",
+        "link": "link",
+        "tourInfo": "tourInfo",
+        "price":"900",
+        "photo":"photo"
+    }
+]

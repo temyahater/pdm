@@ -5,7 +5,15 @@
         "name": "Vlad",
         "surname": "Iiiikaaaan ",
         "old": "20",
-        "password": "9"
+        "password": "9",
+        "status": "Add status",
+        "familyStatus": "Add family status",
+        "interests": ["Add interests"],
+        "purpose": "Add purpose",
+        "links": ["Add links"],
+        "aboutSelf": "About self",
+        "feedbacks": ["Feedback"],
+        "rating": 0
     },
     {  
         "_id": 2,
@@ -13,7 +21,15 @@
         "name": "Andrey",
         "surname": "Yakimovich ",
         "old": "20",
-        "password": "10"
+        "password": "10",
+        "status": "Add status",
+        "familyStatus": "Add family status",
+        "interests": ["Add interests"],
+        "purpose": "Add purpose",
+        "links": ["Add links"],
+        "aboutSelf": "About self",
+        "feedbacks": ["Feedback"],
+        "rating": 0
     },
     {
         "_id": 3,
@@ -21,6 +37,14 @@
         "name": "Evgeny",
         "surname": "Shokel ",
         "old": "20",
-        "password": "11"
+        "password": "11",
+        "status": "Add status",
+        "familyStatus": "Add family status",
+        "interests": ["Add interests"],
+        "purpose": "Add purpose",
+        "links": ["Add links"],
+        "aboutSelf": "About self",
+        "feedbacks": ["Feedback"],
+        "rating": 0
     }
 ]

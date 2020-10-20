@@ -161,6 +161,7 @@ code {
 
 .enterFormData .enterRegister span:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 
 .enterFormData button {
@@ -183,6 +184,7 @@ code {
   -webkit-box-shadow: 0 0 10px rgba(214, 25, 25, 0.5);
           box-shadow: 0 0 10px rgba(214, 25, 25, 0.5);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 
 .enterFormInput {
@@ -238,6 +240,7 @@ code {
 
 .registerFormModal .registerData input:hover {
   background: rgba(201, 201, 201, 0.5);
+  cursor: pointer;
 }
 
 .registerFormModal .emptyRegisterData {
@@ -260,6 +263,7 @@ code {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 
 .prettyButtonGray {
@@ -278,6 +282,7 @@ code {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 
 .account {
@@ -352,6 +357,7 @@ code {
 .account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-mainPhoto :hover {
   width: 95%;
   height: 100%;
+  cursor: pointer;
 }
 
 .account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-mainPhoto img {
@@ -401,6 +407,7 @@ code {
 .account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-otherPhotos .account-main-header-photos-addPhoto :hover {
   width: 300%;
   height: 300%;
+  cursor: pointer;
 }
 
 .account .account-main .account-main-header .account-main-header-photos .account-main-header-photos-otherPhotos .account-main-header-photos-addPhoto img {
@@ -452,6 +459,7 @@ code {
   margin-left: -5px;
   -webkit-box-shadow: 5px 10px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 10px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .account .account-main .account-main-footer {
@@ -479,6 +487,7 @@ code {
 
 .account .account-main .account-main-footer .account-main-description:hover {
   text-shadow: 0 0 10px white;
+  cursor: pointer;
 }
 
 .account .account-main .account-main-footer .account-main-feedbacks {
@@ -513,6 +522,7 @@ code {
 .account .account-main .account-main-footer .account-main-feedbacks .account-main-feedback:hover {
   -webkit-box-shadow: 0 0 10px #d72631;
           box-shadow: 0 0 10px #d72631;
+  cursor: pointer;
 }
 
 .account #AccountInfoModal .accountInfoModal {
@@ -560,6 +570,7 @@ code {
 .account #AccountInfoModal .accountInfoModal .accountInfoModalButtons :nth-child(1):hover {
   width: 55%;
   background: #eb1a28;
+  cursor: pointer;
 }
 
 .account #AccountInfoModal .accountInfoModal .accountInfoModalButtons :nth-child(2) {
@@ -575,6 +586,567 @@ code {
 
 .account #AccountInfoModal .accountInfoModal .accountInfoModalButtons :nth-child(2):hover {
   width: 45%;
+  background: #069eb3;
+  cursor: pointer;
+}
+
+.home {
+  width: 100%;
+  height: 1000px;
+  background: #f5f0e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .navbar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 7%;
+  background: #1e3d59;
+  color: #ff6e40;
+}
+
+.home .navbar a {
+  color: #f5f0e1;
+}
+
+.home .navbar #account-exit {
+  background: none;
+  border: none;
+  outline: none;
+  color: #d72631;
+}
+
+.home .home-main {
+  width: 80%;
+  height: 95%;
+  background: #a2d5c6;
+  margin-top: 3.3%;
+}
+
+.home .home-main .home-main-article {
+  width: 100%;
+  height: 7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.home .home-main .home-main-article .home-main-article-sort {
+  width: 33%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.home .home-main .home-main-article .home-main-article-sort button {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #077b8a;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.home .home-main .home-main-article .home-main-article-sort button:hover {
+  cursor: pointer;
+}
+
+.home .home-main .home-main-article .home-main-article-sort .dropdown {
+  width: 45%;
+  height: 60%;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.home .home-main .home-main-article .home-main-article-sort .dropdown:hover {
+  width: 55%;
+  cursor: pointer;
+}
+
+.home .home-main .home-main-article .home-main-article-sort .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background: #f9f9f9;
+  width: 100%;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.home .home-main .home-main-article .home-main-article-sort .dropdown .dropdown-content div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.home .home-main .home-main-article .home-main-article-sort .dropdown .dropdown-content div:hover {
+  background: #f5f0e1;
+  margin-left: 10%;
+}
+
+.home .home-main .home-main-article .home-main-article-sort .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.home .home-main .home-main-article .home-main-article-sort .dropdown:hover .dropbtn {
+  background: #069eb3;
+}
+
+.home .home-main .home-main-article .home-main-article-create {
+  width: 33%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.home .home-main .home-main-article .home-main-article-create button {
+  width: 45%;
+  height: 60%;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #077b8a;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.home .home-main .home-main-article .home-main-article-create button:hover {
+  -webkit-box-shadow: 5px 10px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 10px 0px rgba(0, 0, 0, 0.5);
+  width: 55%;
+  cursor: pointer;
+}
+
+.home .home-main .home-main-article .home-main-article-create button:focus {
+  background: #069eb3;
+}
+
+.home .home-main .home-main-article .home-main-article-search {
+  width: 33%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.home .home-main .home-main-article .home-main-article-search button {
+  width: 30%;
+  height: 60%;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #077b8a;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.home .home-main .home-main-article .home-main-article-search button:hover {
+  width: 35%;
+  cursor: pointer;
+  margin-left: -5px;
+  -webkit-box-shadow: 5px 10px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.home .home-main .home-main-article .home-main-article-search button:focus {
+  background: #069eb3;
+}
+
+.home .home-main .home-main-article .home-main-article-search input {
+  width: 55%;
+  height: 60%;
+  background: #f5f0e1;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.home .home-main .home-main-article .home-main-article-search input:hover {
+  width: 60%;
+}
+
+.home .home-main .home-main-rooms {
+  width: 100%;
+  height: 93%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .home-main .home-main-rooms .home-main-rooms-body {
+  width: 98%;
+  height: 98%;
+  background: #f5f0e1;
+  border-radius: 5px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.home .home-main .home-main-rooms .home-main-rooms-body .home-main-rooms-body-button .home-main-rooms-body-button-td {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .home-main .home-main-rooms .home-main-rooms-body .home-main-rooms-body-button button {
+  width: 45%;
+  height: 60%;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #077b8a;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.home .home-main .home-main-rooms .home-main-rooms-body .home-main-rooms-body-button button:hover {
+  -webkit-box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+  width: 55%;
+  cursor: pointer;
+}
+
+.home .home-main .home-main-rooms .home-main-rooms-body .home-main-rooms-body-button button:focus {
+  background: #069eb3;
+}
+
+.home .home-footer {
+  width: 80%;
+  height: 5%;
+  background: #1e3d59;
+}
+
+.create-room-modal {
+  background: #a2d5c6;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.create-room-modal .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.create-room-modal .modal-body input {
+  width: 65%;
+  height: 60%;
+  background: #f5f0e1;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.create-room-modal .modal-body input:hover {
+  width: 70%;
+}
+
+.create-room-modal .create-room-modal-buttons :nth-child(1) {
+  width: 20%;
+  height: 60%;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #d72631;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.create-room-modal .create-room-modal-buttons :nth-child(1):hover {
+  background: #eb1a28;
+  width: 25%;
+  cursor: pointer;
+}
+
+.create-room-modal .create-room-modal-buttons :nth-child(2) {
+  width: 30%;
+  height: 60%;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #077b8a;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.create-room-modal .create-room-modal-buttons :nth-child(2):hover {
+  background: #069eb3;
+  width: 35%;
+  cursor: pointer;
+}
+
+.admin {
+  width: 100%;
+  height: 1000px;
+  background: #f5f0e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin .navbar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 7%;
+  background: #1e3d59;
+  color: #ff6e40;
+}
+
+.admin .navbar a {
+  color: #f5f0e1;
+}
+
+.admin .navbar #account-exit {
+  background: none;
+  border: none;
+  outline: none;
+  color: #d72631;
+}
+
+.admin .admin-main {
+  width: 100%;
+  height: 100%;
+  background: #a2d5c6;
+  margin-top: 3.3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin .admin-main .admin-main-article {
+  width: 100%;
+  height: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.admin .admin-main .admin-main-article .dropdown {
+  width: 45%;
+  height: 60%;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.admin .admin-main .admin-main-article .dropdown:hover {
+  width: 55%;
+  cursor: pointer;
+}
+
+.admin .admin-main .admin-main-article .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background: #f9f9f9;
+  width: 100%;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.admin .admin-main .admin-main-article .dropdown .dropdown-content div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.admin .admin-main .admin-main-article .dropdown .dropdown-content div:hover {
+  background: #f5f0e1;
+  margin-left: 10%;
+}
+
+.admin .admin-main .admin-main-article .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.admin .admin-main .admin-main-article .dropdown:hover .dropbtn {
+  background: #069eb3;
+}
+
+.admin .admin-main .admin-main-article .admin-main-article-table {
+  width: 33%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.admin .admin-main .admin-main-article .admin-main-article-table button {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #077b8a;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.admin .admin-main .admin-main-article .admin-main-article-table button:hover {
+  cursor: pointer;
+}
+
+.admin .admin-main .admin-main-table {
+  width: 97%;
+  height: 90%;
+  background: #f5f0e1;
+  border-radius: 5px;
+}
+
+.admin .admin-main .admin-main-table .admin-main-table-button .admin-main-table-button-td {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin .admin-main .admin-main-table .admin-main-table-button button {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  width: 45%;
+  height: 60%;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #077b8a;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.admin .admin-main .admin-main-table .admin-main-table-button button:hover {
+  -webkit-box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+  width: 55%;
+  cursor: pointer;
+}
+
+.admin .admin-main .admin-main-table .admin-main-table-button button:focus {
+  background: #069eb3;
+}
+
+.pretty-button {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  width: 45%;
+  height: 60%;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #077b8a;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.pretty-button:hover {
+  -webkit-box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+  width: 55%;
+  cursor: pointer;
+}
+
+.pretty-button:focus {
   background: #069eb3;
 }
 /*# sourceMappingURL=index.css.map */

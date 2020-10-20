@@ -1,0 +1,20 @@
+[
+    {
+        "_id": 1,
+        "user": "user1",
+        "feedback": "feedback 1",
+        "like": false
+    },
+    {
+        "_id": 2,
+        "user": "user2",
+        "feedback": "feedback2",
+        "like": false
+    },
+    {
+        "_id": 3,
+        "user": "user3",
+        "feedback": "feedback 3",
+        "like": true
+    }
+]

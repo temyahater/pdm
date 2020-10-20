@@ -34,6 +34,10 @@ async function postUsersToReg(user){
 
 class Enter extends Component{
 
+  componentDidMount(){
+    document.cookie="account=''"
+  }
+
   render(){
     return ( 
       <div className="App">
@@ -55,9 +59,13 @@ class Enter extends Component{
           />
         <EnterPhotos />
         <EnterForm enterClick={()=>fetch('http://localhost:5000/users').then(res=>res.json())
-        .then(data=>
-          data.find(e=>e.email===document.getElementById('enterEmail').value&&e.password===document.getElementById('enterPassword').value)?
-          document.location.href='http://localhost:3000/account':enterFormShake(document.getElementById('enterEmailDiv'),document.getElementById('enterPasswordDiv')))
+        .then(data=>{
+          if(data.find(e=>e.email===document.getElementById('enterEmail').value&&e.password===document.getElementById('enterPassword').value)){
+            document.cookie="account="+data.find(e=>e.email===document.getElementById('enterEmail').value&&e.password===document.getElementById('enterPassword').value)._id;
+            return document.location.href='http://localhost:3000/home';
+          }
+          return enterFormShake(document.getElementById('enterEmailDiv'),document.getElementById('enterPasswordDiv'))
+          })
         } />
       </div>
     );

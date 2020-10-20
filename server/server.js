@@ -108,8 +108,104 @@ app.delete('/userstoreg/:id',(req,res)=>{
     })
 });
 
+app.get('/rooms',(req,res)=>{
+    db.collection('rooms').find().toArray((err,data)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.send(data);
+    })
+});
+
+app.post('/rooms',(req,res)=>{
+    console.log(req.body);
+    db.collection('rooms').insertOne({_id:req.body.id,name:req.body.name,usersinvite:req.body.usersinvite,users:req.body.users,
+        tour:req.body.tour,maxCount:req.body.maxCount,description:req.body.description,status:req.body.status,
+        time:req.body.time,messages:req.body.messages,price:req.body.price},(err,result)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+    })
+    res.sendStatus(200);
+});
+
+app.delete('/rooms/:id',(req,res)=>{
+    db.collection('rooms').deleteOne({_id: +(req.params.id)},(err,result)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.sendStatus(200);
+    })
+});
+
+app.get('/tours',(req,res)=>{
+    db.collection('tours').find().toArray((err,data)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.send(data);
+    })
+});
+
+app.post('/tours',(req,res)=>{
+    console.log(req.body);
+    db.collection('tours').insertOne({_id:req.body.id,name:req.body.name,link:req.body.link,
+        tourInfo:req.body.tourInfo,price:req.body.price,photo:req.body.photo},(err,result)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+    })
+    res.sendStatus(200);
+});
+
+app.delete('/tours/:id',(req,res)=>{
+    db.collection('tours').deleteOne({_id: +(req.params.id)},(err,result)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.sendStatus(200);
+    })
+});
+
+app.get('/feedbacks',(req,res)=>{
+    db.collection('feedbacks').find().toArray((err,data)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.send(data);
+    })
+});
+
+app.post('/feedbacks',(req,res)=>{
+    console.log(req.body);
+    db.collection('feedbacks').insertOne({_id:req.body.id,user:req.body.user,feedback:req.body.feedback,like:req.body.like},(err,result)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+    })
+    res.sendStatus(200);
+});
+
+app.delete('/feedbacks/:id',(req,res)=>{
+    db.collection('feedbacks').deleteOne({_id: +(req.params.id)},(err,result)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.sendStatus(200);
+    })
+});
+
 mongoClient.connect('mongodb://localhost:27017/TravelParty',{useNewUrlParser: true, useUnifiedTopology: true},(err,data)=>{
     if(err) return console.log(err);
     db=data.db('TravelParty');
-    app.listen(5000,()=>{console.log('a nyka idi syda, padal')});
+    app.listen(5000,()=>{console.log('a nyka idi syda, padal\'')});
 })
