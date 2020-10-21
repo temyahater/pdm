@@ -34,7 +34,7 @@ class CreateTourForm extends Component{
                         </div>
                         <div className="modal-footer create-room-modal-buttons">
                             <button type="button" data-dismiss="modal">Close</button>
-                            <button type="button" onClick={this.props.createTourClick} >Create</button>
+                            <button type="button" onClick={()=>{this.props.createTourClick()&&this.props.updateTours()}} data-dismiss="modal">Create</button>
                         </div>
                     </div>
                 </div>

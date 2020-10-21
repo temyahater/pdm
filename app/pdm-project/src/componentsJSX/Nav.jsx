@@ -17,6 +17,9 @@ class Nav extends Component{
                 <li className="nav-item">
                   <a className="nav-link account-settings-link" href={"http://localhost:3000/account/"+this.props.account._id}>Account</a>
                 </li>
+                <li className="nav-item">
+                  <div className="nav-link account-settings-link" data-toggle="modal" data-target="#roomsModal">Rooms</div>
+                </li>
             </ul>
             </div>
             <button id="account-exit" onClick={()=>window.confirm('Leave?')?document.location.href='http://localhost:3000':0}>Exit</button>

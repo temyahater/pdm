@@ -27,7 +27,9 @@ class AdminToursTable extends Component{
                         <td>{e.tourInfo}</td>
                         <td>{e.price}</td>
                         <td>{e.photo}</td>
-                        <td className="admin-main-table-button-td"><button>Delete</button></td>
+                        <td className="admin-main-table-button-td" onClick={()=>{
+                          if(window.confirm('Are u sure?')){this.props.deleteFetch(e._id,'tours');this.props.updateTours()}
+                        }}><button>Delete</button></td>
                         </tr>
                         )
                     }

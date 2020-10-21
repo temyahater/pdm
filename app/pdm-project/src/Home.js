@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CreateRoomForm from './componentsJSX/CreateRoomForm';
 import Nav from './componentsJSX/Nav';
+import RoomsModal from './componentsJSX/RoomsModal';
 
 async function postCreateRoom(room){
   try {
@@ -26,17 +27,17 @@ class Home extends Component{
 
   componentDidMount(){
     fetch('http://localhost:5000/rooms').then(res=>res.json()).then(data=>this.setState({rooms: data}));
-    fetch('http://localhost:5000/users/'+document.cookie.split(';').find(e=>e.includes('account')).slice(9)).then(res=>res.json()).then(el=>this.setState({account: el}));
+    fetch('http://localhost:5000/users/'+document.cookie.split(';').find(e=>e.includes('account')).slice(8)).then(res=>res.json()).then(el=>this.setState({account: el}));
   }
 
   render(){
     return ( 
-      <div className="home" onClick={()=>console.log(this.state.account)}>
+      <div className="home" onClick={()=>console.log(document.cookie.split(';').find(e=>e.includes('account')).slice(8))}>
         <CreateRoomForm createFormClick={()=>postCreateRoom({
           id:(''+(new Date()).getTime()).slice(-5),
           name:document.getElementById('createRoomName').value,
           usersinvite:[],
-          users:[this.state.account],
+          users:[this.state.account._id],
           tour:document.getElementById('createRoomTour').value,
           maxCount:document.getElementById('createRoomMaxCount').value,
           description:document.getElementById('createRoomDescription').value,
@@ -45,6 +46,7 @@ class Home extends Component{
           messages:[],
           price:"0"
         })} />
+        <RoomsModal rooms={this.state.rooms.filter(e=>e.users.includes(this.state.account._id))} />
         <Nav account={this.state.account} />
         <div className="home-main">
             <div className="home-main-article">

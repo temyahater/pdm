@@ -22,7 +22,9 @@ class AdminFeedbacksTable extends Component{
                         <td>{e.user}</td>
                         <td>{e.feedback}</td>
                         <td>{e.like}</td>
-                        <td className="admin-main-table-button-td"><button>Delete</button></td>
+                        <td className="admin-main-table-button-td"><button onClick={()=>{
+                          if(window.confirm('Are u sure?')){this.props.deleteFetch(e._id,'feedbacks');this.props.updateFeedbacks()}
+                        }}>Delete</button></td>
                         </tr>
                         )
                     }

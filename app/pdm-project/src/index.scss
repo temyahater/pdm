@@ -747,6 +747,55 @@ code{
     }
 }
 
+.rooms-modal{
+    background: $account-lightblue;
+    font-family: 'Work Sans', sans-serif;
+
+    .modal-body{
+        display: flex;
+        justify-content: space-between;
+
+        button{
+            width: 15%;
+            height: 60%;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            transition: all 0.3s ease-out;
+            background: $account-midlleblue;
+            color: $account-gray;
+            border-radius: 5px;
+
+            &:hover{
+                background: #069eb3;
+                width: 20%;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .rooms-modal-buttons{
+
+        button{
+            width: 20%;
+            height: 60%;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            transition: all 0.3s ease-out;
+            background: $account-red;
+            color: $account-gray;
+            border-radius: 5px;
+
+            &:hover{
+                background: #eb1a28;
+                width: 25%;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
 .create-room-modal{
     background: $account-lightblue;
     font-family: 'Work Sans', sans-serif;
@@ -807,6 +856,35 @@ code{
                 width: 35%;
                 cursor: pointer;
             }
+        }
+    }
+}
+
+.room{
+    width: 100%;
+    height: 1000px;
+    background: $account-gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .navbar{
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        height: 7%;
+        background: $account-blue;
+        color: $account-orange;
+
+        a{
+            color: $account-gray;
+        }
+
+        #account-exit{
+            background: none;
+            border: none;
+            outline: none;
+            color: $account-red;
         }
     }
 }
@@ -925,6 +1003,7 @@ code{
             height: 90%;
             background: $account-gray;
             border-radius: 5px;
+            font-family: 'Work Sans', sans-serif;
 
             .admin-main-table-button{
 

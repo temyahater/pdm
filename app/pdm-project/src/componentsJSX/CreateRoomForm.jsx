@@ -38,7 +38,7 @@ class CreateRoomForm extends Component{
                         </div>
                         <div className="modal-footer create-room-modal-buttons">
                             <button type="button" data-dismiss="modal">Close</button>
-                            <button type="button" onClick={this.props.createFormClick} >Create</button>
+                            <button type="button" onClick={this.props.createFormClick} data-dismiss="modal">Create</button>
                         </div>
                     </div>
                 </div>

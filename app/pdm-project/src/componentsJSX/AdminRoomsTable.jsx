@@ -28,7 +28,9 @@ class AdminRoomsTable extends Component{
                         <td>{e.time}</td>
                         <td>{e.status}</td>
                         <td>{e.users.length}/{e.maxCount}</td>
-                        <td className="admin-main-table-button-td"><button>Delete</button></td>
+                        <td className="admin-main-table-button-td"><button onClick={()=>{
+                          if(window.confirm('Are u sure?')){this.props.deleteFetch(e._id,'rooms');this.props.updateRooms()}
+                        }}>Delete</button></td>
                         </tr>
                         )
                     }

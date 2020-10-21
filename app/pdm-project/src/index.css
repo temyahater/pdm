@@ -873,6 +873,58 @@ code {
   background: #1e3d59;
 }
 
+.rooms-modal {
+  background: #a2d5c6;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.rooms-modal .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rooms-modal .modal-body button {
+  width: 15%;
+  height: 60%;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #077b8a;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.rooms-modal .modal-body button:hover {
+  background: #069eb3;
+  width: 20%;
+  cursor: pointer;
+}
+
+.rooms-modal .rooms-modal-buttons button {
+  width: 20%;
+  height: 60%;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #d72631;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.rooms-modal .rooms-modal-buttons button:hover {
+  background: #eb1a28;
+  width: 25%;
+  cursor: pointer;
+}
+
 .create-room-modal {
   background: #a2d5c6;
   font-family: 'Work Sans', sans-serif;
@@ -939,6 +991,42 @@ code {
   background: #069eb3;
   width: 35%;
   cursor: pointer;
+}
+
+.room {
+  width: 100%;
+  height: 1000px;
+  background: #f5f0e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.room .navbar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 7%;
+  background: #1e3d59;
+  color: #ff6e40;
+}
+
+.room .navbar a {
+  color: #f5f0e1;
+}
+
+.room .navbar #account-exit {
+  background: none;
+  border: none;
+  outline: none;
+  color: #d72631;
 }
 
 .admin {
@@ -1082,6 +1170,7 @@ code {
   height: 90%;
   background: #f5f0e1;
   border-radius: 5px;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .admin .admin-main .admin-main-table .admin-main-table-button .admin-main-table-button-td {

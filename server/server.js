@@ -118,6 +118,16 @@ app.get('/rooms',(req,res)=>{
     })
 });
 
+app.get('/rooms/:id',(req,res)=>{
+    db.collection('rooms').find().toArray((err,data)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.send(data.find(e=>e._id==req.params.id));
+    })
+});
+
 app.post('/rooms',(req,res)=>{
     console.log(req.body);
     db.collection('rooms').insertOne({_id:req.body.id,name:req.body.name,usersinvite:req.body.usersinvite,users:req.body.users,

@@ -22,9 +22,42 @@ async function postCreateTour(tour){
     }
 }
 
+async function postUsers(user){
+  try {
+    const response = await fetch('http://localhost:5000/users', {
+      method: 'POST', 
+      body: JSON.stringify({id:user.id,email:user.email,name:user.name,surname:user.surname,old:user.old,password:user.password,
+        status:user.status,familyStatus:user.familyStatus,interests:user.interests,purpose:user.purpose,links:user.links,
+        aboutSelf:user.aboutSelf,feedbacks:user.feedbacks,rating:user.rating}), 
+      headers: {'Content-Type': 'application/json'}
+    });
+    const json = await response.json();
+    console.log(JSON.stringify(json));
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function deleteFetch(id,table){
+  try {
+    const response = await fetch('http://localhost:5000/'+table+'/'+id, {
+      method: 'DELETE'
+    });
+    const json = await response.json();
+    console.log(JSON.stringify(json));
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 class Admin extends Component{
   constructor(props){
     super(props);
+    // this.updateUsersToReg = this.updateUsersToReg.bind(this)
+    // this.updateUsers = this.updateUsers.bind(this)
+    // this.updateRooms = this.updateRooms.bind(this)
+    // this.updateTours = this.updateTours.bind(this)
+    // this.updateFeedbacks = this.updateFeedbacks.bind(this)
     this.state={table:'Users',rooms:[],users:[],userstoreg:[]};
   }
 
@@ -36,18 +69,38 @@ class Admin extends Component{
     fetch('http://localhost:5000/feedbacks').then(res=>res.json()).then(data=>this.setState({feedbacks: data}));
   }
 
+  updateUsersToReg(){
+    fetch('http://localhost:5000/userstoreg').then(res=>res.json()).then(data=>this.setState({userstoreg: data}));
+  }
+
+  updateUsers(){
+    fetch('http://localhost:5000/users').then(res=>res.json()).then(data=>this.setState({users: data}));
+  }
+
+  updateRooms(){
+    fetch('http://localhost:5000/rooms').then(res=>res.json()).then(data=>this.setState({rooms: data}));
+  }
+
+  updateTours(){
+    fetch('http://localhost:5000/tours').then(res=>res.json()).then(data=>this.setState({tours: data}));
+  }
+
+  updateFeedbacks(){
+    fetch('http://localhost:5000/feedbacks').then(res=>res.json()).then(data=>this.setState({feedbacks: data}));
+  }
+
   tableSwitch(name){
     switch(name){
         case 'Users':
-            return <AdminUsersTable users={this.state.users} />;
+            return <AdminUsersTable updateUsers={()=>this.updateUsers()} deleteFetch={deleteFetch} users={this.state.users} />;
         case 'Userstoreg':
-            return <AdminUsersToRegTable userstoreg={this.state.userstoreg} />;
+            return <AdminUsersToRegTable updateUsersToReg={()=>this.updateUsersToReg()} deleteFetch={deleteFetch} postUsers={postUsers} userstoreg={this.state.userstoreg} />;
         case 'Rooms':
-            return <AdminRoomsTable rooms={this.state.rooms} />;
+            return <AdminRoomsTable updateRooms={()=>this.updateRooms()} deleteFetch={deleteFetch} rooms={this.state.rooms} />;
         case 'Tours':
-            return <AdminToursTable tours={this.state.tours} />;
+            return <AdminToursTable updateTours={()=>this.updateTours()} deleteFetch={deleteFetch} tours={this.state.tours} />;
         case 'Feedbacks':
-            return <AdminFeedbacksTable feedbacks={this.state.feedbacks} />;
+            return <AdminFeedbacksTable updateFeedbacks={()=>this.updateFeedbacks()} deleteFetch={deleteFetch} feedbacks={this.state.feedbacks} />;
         default:
             return 'вы бездарь, не может тут вообще быть дефолт';
       }
@@ -57,7 +110,7 @@ class Admin extends Component{
     return ( 
       <div className="admin">
           <AdminNav />
-          <CreateTourForm createTourClick={()=>postCreateTour({
+          <CreateTourForm updateTours={()=>this.updateTours()} createTourClick={()=>postCreateTour({
               id:(new Date()).getTime(),
               name:document.getElementById('createTourName').value,
               link:document.getElementById('createTourLink').value,

@@ -4,7 +4,7 @@ class AdminUsersToRegTable extends Component{
 
   render(){
     return ( 
-      <div className="admin-userstoreg" onClick={()=>console.log(this.props.userstoreg)}>
+      <div className="admin-userstoreg">
           <table className="table">
                 <thead>
                   <tr>
@@ -38,8 +38,25 @@ class AdminUsersToRegTable extends Component{
                         <td>{e.aboutSelf}</td>
                         <td>{e.feedbacks}</td>
                         <td>{e.rating}</td>
-                        <td className="admin-main-table-button-td"><button>Confirm</button></td>
-                        <td className="admin-main-table-button-td"><button>Delete</button></td>
+                        <td className="admin-main-table-button-td">
+                        <button onClick={()=>window.confirm('Are u sure?')?
+                        this.props.postUsers({
+                          id:(new Date()).getTime(),
+                          email:e.email,
+                          name:e.name,
+                          old:e.old,
+                          status:e.status,
+                          familyStatus:e.familyStatus,
+                          interests:e.interests,
+                          purpose:e.purpose,
+                          links:e.links,
+                          aboutSelf:e.aboutSelf,
+                          feedbacks:e.feedbacks,
+                          rating:e.rating
+                        }):0}>Confirm</button></td>
+                        <td className="admin-main-table-button-td"><button onClick={()=>{
+                          if(window.confirm('Are u sure?')){this.props.deleteFetch(e._id,'userstoreg');this.props.updateUsersToReg()}
+                        }}>Delete</button></td>
                         </tr>
                         )
                     }

@@ -38,7 +38,9 @@ class AdminUsersTable extends Component{
                         <td>{e.aboutSelf}</td>
                         <td>{e.feedbacks}</td>
                         <td>{e.rating}</td>
-                        <td className="admin-main-table-button-td"><button>Delete</button></td>
+                        <td className="admin-main-table-button-td"><button onClick={()=>{
+                          if(window.confirm('Are u sure?')){this.props.deleteFetch(e._id,'users');this.props.updateUsers()}
+                        }}>Delete</button></td>
                         </tr>
                         )
                     }
