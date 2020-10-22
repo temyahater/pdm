@@ -39,21 +39,24 @@ class AdminUsersToRegTable extends Component{
                         <td>{e.feedbacks}</td>
                         <td>{e.rating}</td>
                         <td className="admin-main-table-button-td">
-                        <button onClick={()=>window.confirm('Are u sure?')?
-                        this.props.postUsers({
-                          id:(new Date()).getTime(),
-                          email:e.email,
-                          name:e.name,
-                          old:e.old,
-                          status:e.status,
-                          familyStatus:e.familyStatus,
-                          interests:e.interests,
-                          purpose:e.purpose,
-                          links:e.links,
-                          aboutSelf:e.aboutSelf,
-                          feedbacks:e.feedbacks,
-                          rating:e.rating
-                        }):0}>Confirm</button></td>
+                        <button onClick={()=>{if(window.confirm('Are u sure?')){
+                            this.props.postUsers({
+                              id:(new Date()).getTime(),
+                              email:e.email,
+                              name:e.name,
+                              old:e.old,
+                              status:e.status,
+                              familyStatus:e.familyStatus,
+                              interests:e.interests,
+                              purpose:e.purpose,
+                              links:e.links,
+                              aboutSelf:e.aboutSelf,
+                              feedbacks:e.feedbacks,
+                              rating:e.rating
+                            });
+                            this.props.deleteFetch(e._id,'userstoreg');this.props.updateUsersToReg();this.props.updateUsers();
+                          }
+                        }}>Confirm</button></td>
                         <td className="admin-main-table-button-td"><button onClick={()=>{
                           if(window.confirm('Are u sure?')){this.props.deleteFetch(e._id,'userstoreg');this.props.updateUsersToReg()}
                         }}>Delete</button></td>

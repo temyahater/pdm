@@ -18,11 +18,28 @@ class CreateRoomForm extends Component{
                         </div>
                         <div className="modal-body">
                             <span>Tour:</span>
-                            <input id="createRoomTour"  />
+                            <div className="dropdown">
+                            <button className="dropbtn" id="createRoomTour">Tour</button>
+                                <div className="dropdown-content">
+                                    {
+                                        this.props.tours.map(e=>
+                                        <div key={e._id } onClick={()=>document.getElementById('createRoomTour').innerText=e.name}>{e.name}</div>)
+                                    }
+                                    
+                                </div>
+                            </div>
                         </div>
                         <div className="modal-body">
                             <span>Max count users:</span>
-                            <input id="createRoomMaxCount"  />
+                            <div className="dropdown">
+                            <button className="dropbtn" id="createRoomMaxCount">Count</button>
+                                <div className="dropdown-content">
+                                    <div onClick={()=>document.getElementById('createRoomMaxCount').innerText='2'}>2</div>
+                                    <div onClick={()=>document.getElementById('createRoomMaxCount').innerText='4'}>4</div>
+                                    <div onClick={()=>document.getElementById('createRoomMaxCount').innerText='6'}>6</div>
+                                    <div onClick={()=>document.getElementById('createRoomMaxCount').innerText='8'}>8</div>
+                                </div>
+                            </div>
                         </div>
                         <div className="modal-body">
                             <span>Description:</span>

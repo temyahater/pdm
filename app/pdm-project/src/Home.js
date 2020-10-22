@@ -22,24 +22,39 @@ async function postCreateRoom(room){
 class Home extends Component{
   constructor(props){
     super(props);
-    this.state={rooms:[], account:{}};
+    this.state={rooms:[], account:{}, tours:[]};
+  }
+
+  async updateRoomServer(room,updateInfo,value){
+    try {
+      const response = await fetch('http://localhost:5000/rooms/'+room._id, {
+        method: 'PUT', 
+        body: JSON.stringify({[updateInfo]:value}), 
+        headers: {'Content-Type': 'application/json'}
+      });
+      const json = await response.json();
+      console.log(JSON.stringify(json));
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   componentDidMount(){
+    fetch('http://localhost:5000/tours').then(res=>res.json()).then(data=>this.setState({tours: data}));
     fetch('http://localhost:5000/rooms').then(res=>res.json()).then(data=>this.setState({rooms: data}));
-    fetch('http://localhost:5000/users/'+document.cookie.split(';').find(e=>e.includes('account')).slice(8)).then(res=>res.json()).then(el=>this.setState({account: el}));
+    fetch('http://localhost:5000/users/'+[...document.cookie.split(';').find(e=>e.includes('account'))].filter(e=>+e==e).join('')).then(res=>res.json()).then(el=>this.setState({account: el}));
   }
 
   render(){
     return ( 
-      <div className="home" onClick={()=>console.log(document.cookie.split(';').find(e=>e.includes('account')).slice(8))}>
-        <CreateRoomForm createFormClick={()=>postCreateRoom({
-          id:(''+(new Date()).getTime()).slice(-5),
+      <div className="home" onClick={()=>console.log(this.state)}>
+        <CreateRoomForm tours={this.state.tours} createFormClick={()=>postCreateRoom({
+          id:(new Date()).getTime(),
           name:document.getElementById('createRoomName').value,
           usersinvite:[],
           users:[this.state.account._id],
-          tour:document.getElementById('createRoomTour').value,
-          maxCount:document.getElementById('createRoomMaxCount').value,
+          tour:document.getElementById('createRoomTour').innerText,
+          maxCount:document.getElementById('createRoomMaxCount').innerText,
           description:document.getElementById('createRoomDescription').value,
           status:document.getElementById('createRoomStatus').value,
           time:document.getElementById('createRoomTime').value,
@@ -93,7 +108,16 @@ class Home extends Component{
                     <td>{e.time}</td>
                     <td>{e.status}</td>
                     <td>{e.users.length}/{e.maxCount}</td>
-                    <td className="home-main-rooms-body-button-td"><button>Join</button></td>
+                    <td className="home-main-rooms-body-button-td"><button onClick={()=>{
+                          if(e.users.includes(this.state.account._id)){
+                            document.cookie="room="+e._id; return document.location.href='http://localhost:3000/room';
+                          }
+                          else {
+                            this.updateRoomServer(e,'users',[this.state.account._id,...e.users]);
+                            document.cookie="room="+e._id; return document.location.href='http://localhost:3000/room';
+                          }
+                        }
+                      }>Join</button></td>
                     </tr>
                     )
                   }

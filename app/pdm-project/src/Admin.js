@@ -94,7 +94,7 @@ class Admin extends Component{
         case 'Users':
             return <AdminUsersTable updateUsers={()=>this.updateUsers()} deleteFetch={deleteFetch} users={this.state.users} />;
         case 'Userstoreg':
-            return <AdminUsersToRegTable updateUsersToReg={()=>this.updateUsersToReg()} deleteFetch={deleteFetch} postUsers={postUsers} userstoreg={this.state.userstoreg} />;
+            return <AdminUsersToRegTable updateUsers={()=>this.updateUsers()} updateUsersToReg={()=>this.updateUsersToReg()} deleteFetch={deleteFetch} postUsers={postUsers} userstoreg={this.state.userstoreg} />;
         case 'Rooms':
             return <AdminRoomsTable updateRooms={()=>this.updateRooms()} deleteFetch={deleteFetch} rooms={this.state.rooms} />;
         case 'Tours':

@@ -7,8 +7,17 @@ $account-lightblue: #a2d5c6;
 $account-midlleblue: #077b8a;
 $account-purple: #5c3c92;
 
+#root{
+    height: 100%;
+}
+
+html{
+    height: 100%;
+}
+
 body{
     margin: 0;
+    height: 100%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
@@ -28,7 +37,7 @@ code{
 .App{
     display: flex;
     margin-top: 7%;
-    height: 500px;
+    height: 68%;
 }
 
 .enterForm{
@@ -263,7 +272,8 @@ code{
 
 .account{
     width: 100%;
-    height: 1000px;
+    min-height: 1000px;
+    height: 100%;
     background: $account-gray;
     display: flex;
     justify-content: center;
@@ -512,7 +522,7 @@ code{
 
 .home{
     width: 100%;
-    height: 1000px;
+    height: 100%;
     background: $account-gray;
     display: flex;
     flex-direction: column;
@@ -858,11 +868,69 @@ code{
             }
         }
     }
+    
+    #createRoomMaxCount{
+        z-index: 2;
+    }
+
+    .dropdown{
+        width: 45%;
+        height: 60%;
+        transition: all 0.3s ease-out;
+        z-index: 1;
+
+        &:hover{
+            width: 55%;
+            cursor: pointer;
+        }
+
+        .dropbtn{
+            width: 100%;
+            height: 60%;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            transition: all 0.3s ease-out;
+            background: $account-midlleblue;
+            color: $account-gray;
+            border-radius: 5px;
+        }
+
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background: #f9f9f9;
+            width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+
+            div{
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                transition: all 1s ease-out;
+
+                &:hover{
+                    background: $account-gray;
+                    margin-left: 10%;
+                }
+            }
+        }
+    }
+
+    .dropdown:hover .dropdown-content{
+        display: block;
+    }
+      
+    .dropdown:hover .dropbtn{
+        background: #069eb3;
+    }
 }
 
 .room{
     width: 100%;
-    height: 1000px;
+    height: 100%;
     background: $account-gray;
     display: flex;
     flex-direction: column;
@@ -885,6 +953,132 @@ code{
             border: none;
             outline: none;
             color: $account-red;
+        }
+    }
+
+    .room-main{
+        height: 95%;
+        width: 80%;
+        background: $account-lightblue;
+        margin-top: 3.3%;
+
+        .room-main-articles{
+            width: 100%;
+            height: 7%;
+            display: flex;
+
+            .room-main-article-info{
+                width: 33%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                button{
+                    width: 40%;
+                    height: 65%;
+                    font-size: 18px;
+                    border: none;
+                    outline: none;
+                    transition: all 0.3s ease-out;
+                    background: $account-midlleblue;
+                    color: $account-gray;
+                    border-radius: 5px;
+
+                    &:hover{
+                        box-shadow: 5px 10px 0px rgba(0,0,0,0.5);
+                        width: 55%;
+                        cursor: pointer;
+                    }
+
+                    &:focus{
+                        background: #069eb3;
+                    }
+                }
+            }
+
+            .room-main-article-leave{
+                width: 33%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                button{
+                    width: 40%;
+                    height: 65%;
+                    font-size: 18px;
+                    border: none;
+                    outline: none;
+                    transition: all 0.3s ease-out;
+                    background: $account-red;
+                    color: $account-gray;
+                    border-radius: 5px;
+
+                    &:hover{
+                        box-shadow: 5px 10px 0px rgba(0,0,0,0.5);
+                        width: 55%;
+                        cursor: pointer;
+                    }
+
+                    &:focus{
+                        background: #eb1a28;
+                    }
+                }
+            }
+        }
+
+        .room-main-chat{
+            width: 100%;
+            height: 93%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .room-main-messages{
+                width: 95%;
+                height: 95%;
+                background: $account-gray;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .room-footer{
+        height: 5%;
+        width: 80%;
+        background: $account-blue;
+    }
+}
+
+.room-modal{
+    background: $account-lightblue;
+    font-family: 'Work Sans', sans-serif;
+
+    .modal-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .room-modal-buttons{
+
+        button{
+            width: 20%;
+            height: 60%;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            transition: all 0.3s ease-out;
+            background: $account-red;
+            color: $account-gray;
+            border-radius: 5px;
+
+            &:hover{
+                background: #eb1a28;
+                width: 25%;
+                cursor: pointer;
+            }
         }
     }
 }

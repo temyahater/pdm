@@ -141,6 +141,16 @@ app.post('/rooms',(req,res)=>{
     res.sendStatus(200);
 });
 
+app.put('/rooms/:id',(req,res)=>{
+    db.collection('rooms').updateOne({_id: +(req.params.id)},{$set:{...req.body}},(err,result)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.sendStatus(200);
+    })
+});
+
 app.delete('/rooms/:id',(req,res)=>{
     db.collection('rooms').deleteOne({_id: +(req.params.id)},(err,result)=>{
         if(err){
