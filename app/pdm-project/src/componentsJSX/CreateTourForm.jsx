@@ -8,7 +8,14 @@ class CreateTourForm extends Component{
                     <div className="modal-content create-room-modal">
                         <div className="modal-header">
                             <h5 className="modal-title" id="createTourFormModalLabel">Create tour</h5>
-                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={()=>{
+                                document.getElementById('tourPhotoPreview').src='/images/add-photo.png';
+                                document.getElementById('createTourPhotos').value='';
+                                document.getElementById('createTourName').value='';
+                                document.getElementById('createTourLink').value='';
+                                document.getElementById('createTourInfo').value='';
+                                document.getElementById('createTourPrice').value='';
+                            }}>
                             <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -30,11 +37,38 @@ class CreateTourForm extends Component{
                         </div>
                         <div className="modal-body">
                             <span>Photos:</span>
-                            <input id="createTourPhotos"  />
+                            <input id="createTourPhotos" type="file" onChange={()=>
+                                document.getElementById('tourPhotoPreview').src=URL.createObjectURL(document.getElementById('createTourPhotos').files[0])} />
+                        </div>
+                        <div className="modal-body tour-photo-preview">
+                            <img id="tourPhotoPreview" src="/images/add-photo.png" alt="tour preview" />
                         </div>
                         <div className="modal-footer create-room-modal-buttons">
-                            <button type="button" data-dismiss="modal">Close</button>
-                            <button type="button" onClick={()=>{this.props.createTourClick()&&this.props.updateTours()}} data-dismiss="modal">Create</button>
+                            <button type="button" data-dismiss="modal" onClick={()=>{
+                                document.getElementById('tourPhotoPreview').src='/images/add-photo.png';
+                                document.getElementById('createTourPhotos').value='';
+                                document.getElementById('createTourName').value='';
+                                document.getElementById('createTourLink').value='';
+                                document.getElementById('createTourInfo').value='';
+                                document.getElementById('createTourPrice').value='';
+                            }}>Close</button>
+                            <button type="button" onClick={()=>{
+                                if(document.getElementById('createTourName').value===''||
+                                   document.getElementById('createTourLink').value===''||
+                                   document.getElementById('createTourInfo').value===''||
+                                   document.getElementById('createTourPrice').value===''||
+                                   document.getElementById('createTourPhotos').value==='') alert('nope');
+                                else{
+                                    this.props.createTourClick();
+                                    setTimeout(()=>this.props.updateTours(),100);
+                                }
+                                document.getElementById('tourPhotoPreview').src='/images/add-photo.png';
+                                document.getElementById('createTourPhotos').value='';
+                                document.getElementById('createTourName').value='';
+                                document.getElementById('createTourLink').value='';
+                                document.getElementById('createTourInfo').value='';
+                                document.getElementById('createTourPrice').value='';
+                                }} data-dismiss="modal" >Create</button>
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@ class AdminUsersTable extends Component{
 
   render(){
     return ( 
-      <div className="admin-users" onClick={()=>console.log(this.props.users)}>
+      <div className="admin-users admin-scroll" onClick={()=>console.log(this.props.users)}>
           <table className="table">
                 <thead>
                   <tr>

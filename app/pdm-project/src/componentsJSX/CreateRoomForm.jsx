@@ -16,7 +16,7 @@ class CreateRoomForm extends Component{
                             <span>Name:</span>
                             <input id="createRoomName" />
                         </div>
-                        <div className="modal-body">
+                        {/* <div className="modal-body">
                             <span>Tour:</span>
                             <div className="dropdown">
                             <button className="dropbtn" id="createRoomTour">Tour</button>
@@ -28,6 +28,10 @@ class CreateRoomForm extends Component{
                                     
                                 </div>
                             </div>
+                        </div> */}
+                        <div className="modal-body choose-tour">
+                            <span>Tour:</span>
+                            <button id="createRoomTour" data-toggle="modal" data-target="#tourInfoModal">Choose tour</button>
                         </div>
                         <div className="modal-body">
                             <span>Max count users:</span>

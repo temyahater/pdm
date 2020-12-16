@@ -12,7 +12,7 @@ class AccountInfo extends Component{
         <div className="account-main-header">
           <div className="account-main-header-photos">
             <div className="account-main-header-photos-mainPhoto">
-              <img src="/images/temi4.jpg" alt="main photo1" />
+              <img src={this.props.accountInfo.photo} alt="main photo1" data-toggle="modal" data-target="#AddPhotoModal"/>
             </div>
             <div className="account-main-header-photos-otherPhotos">
               <div className="account-main-header-photos-addPhoto">

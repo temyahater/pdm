@@ -4,7 +4,7 @@ class AdminRoomsTable extends Component{
 
   render(){
     return ( 
-      <div className="admin-rooms" >
+      <div className="admin-rooms admin-scroll" >
           <table className="table">
                 <thead>
                   <tr>

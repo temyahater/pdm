@@ -4,7 +4,7 @@ class AdminToursTable extends Component{
 
   render(){
     return ( 
-      <div className="admin-tours">
+      <div className="admin-tours admin-scroll">
           <table className="table">
                 <thead>
                   <tr>
@@ -26,9 +26,9 @@ class AdminToursTable extends Component{
                         <td>{e.link}</td>
                         <td>{e.tourInfo}</td>
                         <td>{e.price}</td>
-                        <td>{e.photo}</td>
+                        <td className="table-photos"><img src={e.photo} alt="tour"/></td>
                         <td className="admin-main-table-button-td" onClick={()=>{
-                          if(window.confirm('Are u sure?')){this.props.deleteFetch(e._id,'tours');this.props.updateTours()}
+                          if(window.confirm('Are u sure?')){this.props.deleteFetch(e._id,'tours');setTimeout(()=>this.props.updateTours(),100) }
                         }}><button>Delete</button></td>
                         </tr>
                         )

@@ -4,7 +4,7 @@ class AdminUsersToRegTable extends Component{
 
   render(){
     return ( 
-      <div className="admin-userstoreg">
+      <div className="admin-userstoreg admin-scroll">
           <table className="table">
                 <thead>
                   <tr>
@@ -44,7 +44,9 @@ class AdminUsersToRegTable extends Component{
                               id:(new Date()).getTime(),
                               email:e.email,
                               name:e.name,
+                              surname:e.surname,
                               old:e.old,
+                              password:e.password,
                               status:e.status,
                               familyStatus:e.familyStatus,
                               interests:e.interests,
@@ -52,7 +54,8 @@ class AdminUsersToRegTable extends Component{
                               links:e.links,
                               aboutSelf:e.aboutSelf,
                               feedbacks:e.feedbacks,
-                              rating:e.rating
+                              rating:e.rating,
+                              photo:e.photo
                             });
                             this.props.deleteFetch(e._id,'userstoreg');this.props.updateUsersToReg();this.props.updateUsers();
                           }

@@ -5,6 +5,7 @@ import Account from './Account';
 import Home from './Home';
 import Admin from './Admin';
 import Room from './Room';
+import FriendsAccount from './FriendsAccount';
 
 class Main extends Component{
   
@@ -16,6 +17,7 @@ class Main extends Component{
         <Route exact path='/home' component={props => <Home {...props} />}></Route>
         <Route exact path='/admin' component={props => <Admin {...props} />}></Route>
         <Route exact path='/room' component={props => <Room {...props} />}></Route>
+        <Route exact path='/friends/:id' component={props => <FriendsAccount {...props} />}></Route>
       </Switch>
     );
   }

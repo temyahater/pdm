@@ -421,7 +421,7 @@ code{
             .account-main-description{
                 height: 35%;
                 width: 100%;
-                background: $account-red;
+                // background: $account-red;
                 color: $account-gray;
                 font-family: 'Work Sans', sans-serif;
                 font-size: 22px;
@@ -436,7 +436,7 @@ code{
             .account-main-feedbacks{
                 height: 55%;
                 width: 100%;
-                background: $account-orange;
+                background: $account-lightblue;
                 color: $account-gray;
                 font-family: 'Work Sans', sans-serif;
                 font-size: 22px;
@@ -477,6 +477,66 @@ code{
             }
 
             .accountInfoModalButtons{
+                width: 40%;
+                align-self: flex-end;
+                display: flex;
+                justify-content: space-around;
+                margin-right: 2.5%;
+                margin-bottom: 2.5%;
+
+                :nth-child(1){
+                    width: 45%;
+                    border: none;
+                    outline: none;
+                    transition: all 0.3s ease-out;
+                    background: $account-red;
+                    color: $account-gray;
+                    border-radius: 5px;
+
+                    &:hover{
+                        width: 55%;
+                        background: #eb1a28;
+                        cursor: pointer;
+                    }
+                }
+
+                :nth-child(2){
+                    width: 35%;
+                    border: none;
+                    outline: none;
+                    transition: all 0.3s ease-out;
+                    background: $account-midlleblue;
+                    color: $account-gray;
+                    border-radius: 5px;
+
+                    &:hover{
+                        width: 45%;
+                        background: #069eb3;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    #AddPhotoModal{
+        .addPhotoModal{
+            background: $account-lightblue;
+            display: flex;
+            font-family: 'Work Sans', sans-serif;
+
+            .photo-modal{
+                height: 100%;
+                width: 100%;
+
+                #photo-preview{
+                    width: 100%;
+                    border-radius: 3px;
+                    transition: all 1s ease-out;
+                }
+            }
+
+            .addPhotoModalButtons{
                 width: 40%;
                 align-self: flex-end;
                 display: flex;
@@ -757,6 +817,36 @@ code{
     }
 }
 
+.tour-modal{
+    position: absolute;
+    left: -25vw;
+    width: 80vw;
+    background: $account-lightblue;
+    font-family: 'Work Sans', sans-serif;
+
+    .modal-body{
+        padding: 0;
+        padding-top: 0.5%;
+        display: flex;
+    }
+
+    .tour{
+        border: 2px solid $account-blue;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+
+        .tour-photo{
+            width: 20%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
 .rooms-modal{
     background: $account-lightblue;
     font-family: 'Work Sans', sans-serif;
@@ -810,6 +900,24 @@ code{
     background: $account-lightblue;
     font-family: 'Work Sans', sans-serif;
 
+    .choose-tour{
+        button{
+            width: 45%;
+            background: $account-midlleblue;
+            font-size: 19px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            color: $account-gray;
+            transition: all 0.3s ease-out;
+
+            &:hover{
+                width: 55%;
+                background: #069eb3;
+            }
+        }
+    }
+
     .modal-body{
         display: flex;
         justify-content: space-between;
@@ -828,7 +936,19 @@ code{
                 width: 70%;
             }
         }
+
+        #createTourPhotos{
+            font-size: 15px;
+        }       
     }
+
+    .tour-photo-preview{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 50%;
+        }
+    } 
 
     .create-room-modal-buttons{
 
@@ -1059,6 +1179,16 @@ code{
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        .user{
+            color: $account-midlleblue;
+            font-size: 1.5em;
+
+            &:hover{
+                color: #069eb3;
+                cursor: pointer;
+            }
+        }
     }
 
     .room-modal-buttons{
@@ -1199,6 +1329,43 @@ code{
             border-radius: 5px;
             font-family: 'Work Sans', sans-serif;
 
+            .admin-scroll{
+                height: 100%;
+
+                thead{
+                    width: 100%;
+                    display: flex;
+
+                    tr{
+                        width: 100%;
+
+                        th{
+                            width: max-content;
+                        }
+                    }
+                }
+
+                table{
+                    height: 100%;
+                    width: 100%;
+                }
+
+                tbody {
+                    display: block; 
+                    height: 90%;
+                    width: 100%;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                }
+            }
+
+            .table-photos{
+                width: 30%;
+                img{
+                    width: 100%;
+                }
+            }
+
             .admin-main-table-button{
 
                 .admin-main-table-button-td{
@@ -1254,6 +1421,158 @@ code{
 
     &:focus{
         background: #069eb3;
+    }
+}
+
+.friends-account{
+    width: 100%;
+    min-height: 1000px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $account-gray;
+
+    .navbar{
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        height: 7%;
+        background: $account-blue;
+        color: $account-orange;
+
+        a{
+            color: $account-gray;
+        }
+
+        #account-exit{
+            background: none;
+            border: none;
+            outline: none;
+            color: $account-red;
+        }
+    }
+
+    .friends-account-main{
+        width: 65%;
+        height: 100%;
+
+        .friends-account-main-header{
+            width: 100%;
+            height: 50%;
+            margin-top: 5%;
+            display: flex;
+            background: purple;
+
+            .friends-account-main-header-photos{
+                width: 35%;
+                height: 100%;
+                background: greenyellow;
+
+                .friends-account-main-header-photos-photo{
+                    width: 100%;
+                    height: 100%;
+                    background: $account-lightblue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    :hover{
+                        width: 95%;
+                        height: 100%;
+                        cursor: pointer;
+                    }
+
+                    img{
+                        width: 90%;
+                        height: 95%;
+                        border-radius: 3px;
+                        transition: all 1s ease-out;
+                    }
+                }
+            }
+
+            .friends-account-main-header-info{
+                width: 65%;
+                height: 100%;
+                background: $account-lightblue;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding-left: 3%;
+                color: $account-gray;
+
+                div{
+                    background: $account-midlleblue;
+                    width: 90%;
+                    height: max-content;
+                    font-size: 22px;
+                    display: flex;
+                    align-items: center;
+                    font-family: 'Work Sans', sans-serif;
+                    border-radius: 5px;
+                    padding-left: 1%;
+                    transition: 0.5s;
+                    
+                    &:hover{
+                        width: 92%;
+                        margin-left: -5px;
+                        box-shadow: 5px 10px 0px rgba(0,0,0,0.5);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .friends-account-main-footer{
+            background: $account-blue;
+            width: 100%;
+            height: 45%;
+            display: flex;
+            flex-direction: column;
+
+            .friends-account-main-description{
+                height: 35%;
+                width: 100%;
+                // background: $account-red;
+                color: $account-gray;
+                font-family: 'Work Sans', sans-serif;
+                font-size: 22px;
+                padding: 1%;
+
+                &:hover{
+                    text-shadow: 0 0 10px rgb(255, 255, 255);
+                    cursor: pointer;
+                }
+            }
+
+            .friends-account-main-feedbacks{
+                height: 55%;
+                width: 100%;
+                background: $account-lightblue;
+                color: $account-gray;
+                font-family: 'Work Sans', sans-serif;
+                font-size: 22px;
+                padding: 1%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .friends-account-main-feedback{
+                    width: max-content;
+                    max-width: 90%;
+                    height: max-content;
+                    background: $account-red;
+                    padding: 0.3%;
+                    border-radius: 5px;
+                    margin-right: 1%;
+
+                    &:hover{
+                        box-shadow: 0 0 10px $account-red;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
     }
 }
 

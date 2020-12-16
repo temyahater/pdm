@@ -6,7 +6,7 @@ import RoomsModal from './componentsJSX/RoomsModal';
 class Room extends Component{
   constructor(props){
     super(props);
-    this.state={rooms:[],users:[],room:{}, account:{}};
+    this.state={rooms:[],users:[],room:{},account:{}};
   }
 
   async updateRoomServer(room,updateInfo,value){

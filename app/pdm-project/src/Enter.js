@@ -9,11 +9,10 @@ function enterFormShake(el1,el2){
     el1.style.background='rgba(255, 0, 0, 0.5)';
     el2.style.marginLeft='-20px';
     el2.style.background='rgba(255, 0, 0, 0.5)';
-    setTimeout(()=>el1.style.marginLeft='-20px',200)
-    setTimeout(()=>{el1.style.marginLeft='0px'; el1.style.background='rgba(255, 255, 255, 0.5)'},400)
-    setTimeout(()=>el2.style.marginLeft='20px',200)
-    setTimeout(()=>{el2.style.marginLeft='0px'; el2.style.background='rgba(255, 255, 255, 0.5)'},400)
-
+    setTimeout(()=>el1.style.marginLeft='-20px',200);
+    setTimeout(()=>{el1.style.marginLeft='0px'; el1.style.background='rgba(255, 255, 255, 0.5)'},400);
+    setTimeout(()=>el2.style.marginLeft='20px',200);
+    setTimeout(()=>{el2.style.marginLeft='0px'; el2.style.background='rgba(255, 255, 255, 0.5)'},400);
 }
 
 async function postUsersToReg(user){
@@ -22,7 +21,7 @@ async function postUsersToReg(user){
       method: 'POST', 
       body: JSON.stringify({id:user.id,email:user.email,name:user.name,surname:user.surname,old:user.old,password:user.password,
         status:user.status,familyStatus:user.familyStatus,interests:user.interests,purpose:user.purpose,links:user.links,
-        aboutSelf:user.aboutSelf,feedbacks:user.feedbacks,rating:user.rating}), 
+        aboutSelf:user.aboutSelf,feedbacks:user.feedbacks,rating:user.rating,photo:user.photo}), 
       headers: {'Content-Type': 'application/json'}
     });
     const json = await response.json();
@@ -43,19 +42,30 @@ class Enter extends Component{
       <div className="App">
         <ForgotPassword />
         <RegisterForm registerClick={()=>fetch('http://localhost:5000/userstoreg').then(res=>res.json())
-        .then(data=>[].every.call(document.getElementsByClassName('registerInputs'),(e)=>e.value!=='')?
+        .then(data=>[].every.call(document.getElementsByClassName('registerInputs'),e=>e.value!=='')?
           document.getElementById('registerPassword').value===document.getElementById('registerPasswordRepeat').value?
           +document.getElementById('registerOld').value>=18?
           data.find(e=>e.email===document.getElementById('registerEmail').value)?
           document.getElementById('registerEmail').classList.add('emptyRegisterData')
-          :postUsersToReg({id:(new Date()).getTime(),email:document.getElementById('registerEmail').value,
-          name:document.getElementById('registerName').value,surname:document.getElementById('registerSurname').value,
-          old:document.getElementById('registerOld').value,password:document.getElementById('registerPassword').value,
-          status:'Add status',familyStatus:'Add family status',interests:['Add interests'],purpose:'Add purpose',links:['Add links'],
-          aboutSelf:'About self',feedbacks:['Feedback'],rating:0})
+          :postUsersToReg({
+            id:(new Date()).getTime(),
+            email:document.getElementById('registerEmail').value,
+            name:document.getElementById('registerName').value,
+            surname:document.getElementById('registerSurname').value,
+            old:document.getElementById('registerOld').value,
+            password:document.getElementById('registerPassword').value,
+            status:'Add status',
+            familyStatus:'Add family status',
+            interests:['Add interests'],
+            purpose:'Add purpose',
+            links:['Add links'],
+            aboutSelf:'About self',
+            feedbacks:['Feedback'],
+            rating:0,
+            photo:"/images/add-photo.png"})
           :document.getElementById('registerOld').classList.add('emptyRegisterData')
           :document.getElementById('registerPasswordRepeat').classList.add('emptyRegisterData')
-          :[].map.call(document.getElementsByClassName('registerInputs'),(e)=>e.value!==''?e:e.classList.add('emptyRegisterData')))}
+          :[].map.call(document.getElementsByClassName('registerInputs'),e=>e.value!==''?e:e.classList.add('emptyRegisterData')))}
           />
         <EnterPhotos />
         <EnterForm enterClick={()=>fetch('http://localhost:5000/users').then(res=>res.json())

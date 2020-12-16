@@ -488,7 +488,6 @@ code {
 .account .account-main .account-main-footer .account-main-description {
   height: 35%;
   width: 100%;
-  background: #d72631;
   color: #f5f0e1;
   font-family: 'Work Sans', sans-serif;
   font-size: 22px;
@@ -503,7 +502,7 @@ code {
 .account .account-main .account-main-footer .account-main-feedbacks {
   height: 55%;
   width: 100%;
-  background: #ff6e40;
+  background: #a2d5c6;
   color: #f5f0e1;
   font-family: 'Work Sans', sans-serif;
   font-size: 22px;
@@ -595,6 +594,73 @@ code {
 }
 
 .account #AccountInfoModal .accountInfoModal .accountInfoModalButtons :nth-child(2):hover {
+  width: 45%;
+  background: #069eb3;
+  cursor: pointer;
+}
+
+.account #AddPhotoModal .addPhotoModal {
+  background: #a2d5c6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.account #AddPhotoModal .addPhotoModal .photo-modal {
+  height: 100%;
+  width: 100%;
+}
+
+.account #AddPhotoModal .addPhotoModal .photo-modal #photo-preview {
+  width: 100%;
+  border-radius: 3px;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.account #AddPhotoModal .addPhotoModal .addPhotoModalButtons {
+  width: 40%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-right: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.account #AddPhotoModal .addPhotoModal .addPhotoModalButtons :nth-child(1) {
+  width: 45%;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #d72631;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.account #AddPhotoModal .addPhotoModal .addPhotoModalButtons :nth-child(1):hover {
+  width: 55%;
+  background: #eb1a28;
+  cursor: pointer;
+}
+
+.account #AddPhotoModal .addPhotoModal .addPhotoModalButtons :nth-child(2) {
+  width: 35%;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #077b8a;
+  color: #f5f0e1;
+  border-radius: 5px;
+}
+
+.account #AddPhotoModal .addPhotoModal .addPhotoModalButtons :nth-child(2):hover {
   width: 45%;
   background: #069eb3;
   cursor: pointer;
@@ -883,6 +949,43 @@ code {
   background: #1e3d59;
 }
 
+.tour-modal {
+  position: absolute;
+  left: -25vw;
+  width: 80vw;
+  background: #a2d5c6;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.tour-modal .modal-body {
+  padding: 0;
+  padding-top: 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tour-modal .tour {
+  border: 2px solid #1e3d59;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+}
+
+.tour-modal .tour .tour-photo {
+  width: 20%;
+}
+
+.tour-modal .tour .tour-photo img {
+  width: 100%;
+}
+
 .rooms-modal {
   background: #a2d5c6;
   font-family: 'Work Sans', sans-serif;
@@ -940,6 +1043,23 @@ code {
   font-family: 'Work Sans', sans-serif;
 }
 
+.create-room-modal .choose-tour button {
+  width: 45%;
+  background: #077b8a;
+  font-size: 19px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #f5f0e1;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.create-room-modal .choose-tour button:hover {
+  width: 55%;
+  background: #069eb3;
+}
+
 .create-room-modal .modal-body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -963,6 +1083,23 @@ code {
 
 .create-room-modal .modal-body input:hover {
   width: 70%;
+}
+
+.create-room-modal .modal-body #createTourPhotos {
+  font-size: 15px;
+}
+
+.create-room-modal .tour-photo-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.create-room-modal .tour-photo-preview img {
+  width: 50%;
 }
 
 .create-room-modal .create-room-modal-buttons :nth-child(1) {
@@ -1236,6 +1373,16 @@ code {
           justify-content: center;
 }
 
+.room-modal .modal-body .user {
+  color: #077b8a;
+  font-size: 1.5em;
+}
+
+.room-modal .modal-body .user:hover {
+  color: #069eb3;
+  cursor: pointer;
+}
+
 .room-modal .room-modal-buttons button {
   width: 20%;
   height: 60%;
@@ -1399,6 +1546,48 @@ code {
   font-family: 'Work Sans', sans-serif;
 }
 
+.admin .admin-main .admin-main-table .admin-scroll {
+  height: 100%;
+}
+
+.admin .admin-main .admin-main-table .admin-scroll thead {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.admin .admin-main .admin-main-table .admin-scroll thead tr {
+  width: 100%;
+}
+
+.admin .admin-main .admin-main-table .admin-scroll thead tr th {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.admin .admin-main .admin-main-table .admin-scroll table {
+  height: 100%;
+  width: 100%;
+}
+
+.admin .admin-main .admin-main-table .admin-scroll tbody {
+  display: block;
+  height: 90%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.admin .admin-main .admin-main-table .table-photos {
+  width: 30%;
+}
+
+.admin .admin-main .admin-main-table .table-photos img {
+  width: 100%;
+}
+
 .admin .admin-main .admin-main-table .admin-main-table-button .admin-main-table-button-td {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1463,5 +1652,198 @@ code {
 
 .pretty-button:focus {
   background: #069eb3;
+}
+
+.friends-account {
+  width: 100%;
+  min-height: 1000px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f5f0e1;
+}
+
+.friends-account .navbar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 7%;
+  background: #1e3d59;
+  color: #ff6e40;
+}
+
+.friends-account .navbar a {
+  color: #f5f0e1;
+}
+
+.friends-account .navbar #account-exit {
+  background: none;
+  border: none;
+  outline: none;
+  color: #d72631;
+}
+
+.friends-account .friends-account-main {
+  width: 65%;
+  height: 100%;
+}
+
+.friends-account .friends-account-main .friends-account-main-header {
+  width: 100%;
+  height: 50%;
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: purple;
+}
+
+.friends-account .friends-account-main .friends-account-main-header .friends-account-main-header-photos {
+  width: 35%;
+  height: 100%;
+  background: greenyellow;
+}
+
+.friends-account .friends-account-main .friends-account-main-header .friends-account-main-header-photos .friends-account-main-header-photos-photo {
+  width: 100%;
+  height: 100%;
+  background: #a2d5c6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.friends-account .friends-account-main .friends-account-main-header .friends-account-main-header-photos .friends-account-main-header-photos-photo :hover {
+  width: 95%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.friends-account .friends-account-main .friends-account-main-header .friends-account-main-header-photos .friends-account-main-header-photos-photo img {
+  width: 90%;
+  height: 95%;
+  border-radius: 3px;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.friends-account .friends-account-main .friends-account-main-header .friends-account-main-header-info {
+  width: 65%;
+  height: 100%;
+  background: #a2d5c6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-left: 3%;
+  color: #f5f0e1;
+}
+
+.friends-account .friends-account-main .friends-account-main-header .friends-account-main-header-info div {
+  background: #077b8a;
+  width: 90%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Work Sans', sans-serif;
+  border-radius: 5px;
+  padding-left: 1%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.friends-account .friends-account-main .friends-account-main-header .friends-account-main-header-info div:hover {
+  width: 92%;
+  margin-left: -5px;
+  -webkit-box-shadow: 5px 10px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 10px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.friends-account .friends-account-main .friends-account-main-footer {
+  background: #1e3d59;
+  width: 100%;
+  height: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.friends-account .friends-account-main .friends-account-main-footer .friends-account-main-description {
+  height: 35%;
+  width: 100%;
+  color: #f5f0e1;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 22px;
+  padding: 1%;
+}
+
+.friends-account .friends-account-main .friends-account-main-footer .friends-account-main-description:hover {
+  text-shadow: 0 0 10px white;
+  cursor: pointer;
+}
+
+.friends-account .friends-account-main .friends-account-main-footer .friends-account-main-feedbacks {
+  height: 55%;
+  width: 100%;
+  background: #a2d5c6;
+  color: #f5f0e1;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 22px;
+  padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.friends-account .friends-account-main .friends-account-main-footer .friends-account-main-feedbacks .friends-account-main-feedback {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 90%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background: #d72631;
+  padding: 0.3%;
+  border-radius: 5px;
+  margin-right: 1%;
+}
+
+.friends-account .friends-account-main .friends-account-main-footer .friends-account-main-feedbacks .friends-account-main-feedback:hover {
+  -webkit-box-shadow: 0 0 10px #d72631;
+          box-shadow: 0 0 10px #d72631;
+  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */

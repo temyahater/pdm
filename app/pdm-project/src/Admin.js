@@ -9,11 +9,16 @@ import CreateTourForm from './componentsJSX/CreateTourForm';
 
 async function postCreateTour(tour){
     try {
+      let data = new FormData()
+      data.append('id',tour.id);
+      data.append('name',tour.name);
+      data.append('link',tour.link);
+      data.append('tourInfo',tour.tourInfo);
+      data.append('price',tour.price);
+      data.append('tourPhoto',tour.photo);
       const response = await fetch('http://localhost:5000/tours', {
         method: 'POST', 
-        body: JSON.stringify({id:tour.id,name:tour.name,link:tour.link,
-          tourInfo:tour.tourInfo,price:tour.price,photo:tour.photo}), 
-        headers: {'Content-Type': 'application/json'}
+        body: data
       });
       const json = await response.json();
       console.log(JSON.stringify(json));
@@ -28,7 +33,7 @@ async function postUsers(user){
       method: 'POST', 
       body: JSON.stringify({id:user.id,email:user.email,name:user.name,surname:user.surname,old:user.old,password:user.password,
         status:user.status,familyStatus:user.familyStatus,interests:user.interests,purpose:user.purpose,links:user.links,
-        aboutSelf:user.aboutSelf,feedbacks:user.feedbacks,rating:user.rating}), 
+        aboutSelf:user.aboutSelf,feedbacks:user.feedbacks,rating:user.rating,photo:user.photo}), 
       headers: {'Content-Type': 'application/json'}
     });
     const json = await response.json();
@@ -40,6 +45,7 @@ async function postUsers(user){
 
 async function deleteFetch(id,table){
   try {
+    console.log(id,table);
     const response = await fetch('http://localhost:5000/'+table+'/'+id, {
       method: 'DELETE'
     });
@@ -116,7 +122,7 @@ class Admin extends Component{
               link:document.getElementById('createTourLink').value,
               tourInfo:document.getElementById('createTourInfo').value,
               price:document.getElementById('createTourPrice').value,
-              photo:document.getElementById('createTourPhotos').value
+              photo:document.getElementById('createTourPhotos').files[0]
           })} />
           <div className="admin-main">
               <div className="admin-main-article">

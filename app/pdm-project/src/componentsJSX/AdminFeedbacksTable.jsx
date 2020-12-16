@@ -4,7 +4,7 @@ class AdminFeedbacksTable extends Component{
 
   render(){
     return ( 
-      <div className="admin-feedbacks">
+      <div className="admin-feedbacks admin-scroll">
           <table className="table">
                 <thead>
                   <tr>

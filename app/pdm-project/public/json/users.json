@@ -13,7 +13,8 @@
         "links": ["Add links"],
         "aboutSelf": "About self",
         "feedbacks": ["Feedback"],
-        "rating": 0
+        "rating": 0,
+        "photo":""
     },
     {  
         "_id": 2,
@@ -29,7 +30,8 @@
         "links": ["Add links"],
         "aboutSelf": "About self",
         "feedbacks": ["Feedback"],
-        "rating": 0
+        "rating": 0,
+        "photo":""
     },
     {
         "_id": 3,
@@ -45,6 +47,7 @@
         "links": ["Add links"],
         "aboutSelf": "About self",
         "feedbacks": ["Feedback"],
-        "rating": 0
+        "rating": 0,
+        "photo":""
     }
 ]

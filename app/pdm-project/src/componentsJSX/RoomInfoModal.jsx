@@ -34,7 +34,7 @@ class RoomInfoModal extends Component{
                         <div className="modal-body">
                             {
                                 this.props.users.map(e=>
-                                    <div key={e._id}>{e.name} {e.surname}</div>
+                                    <div className="user" onClick={()=>document.location.href='http://localhost:3000/friends/'+e._id} key={e._id}>{e.name} {e.surname}</div>
                                 )
                             }
                         </div>

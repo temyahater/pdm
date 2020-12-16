@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CreateRoomForm from './componentsJSX/CreateRoomForm';
 import Nav from './componentsJSX/Nav';
 import RoomsModal from './componentsJSX/RoomsModal';
+import TourInfoModal from './componentsJSX/TourInfoModal';
 
 async function postCreateRoom(room){
   try {
@@ -62,6 +63,7 @@ class Home extends Component{
           price:"0"
         })} />
         <RoomsModal rooms={this.state.rooms.filter(e=>e.users.includes(this.state.account._id))} />
+        <TourInfoModal tours={this.state.tours}/>
         <Nav account={this.state.account} />
         <div className="home-main">
             <div className="home-main-article">
